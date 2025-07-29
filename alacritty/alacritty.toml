@@ -1,0 +1,18 @@
+[window]
+opacity = 0.95
+padding.x = 10
+padding.y = 10
+decorations = "Full"
+
+[font]
+size = 14
+
+[[keyboard.bindings]]
+key = "Left"
+mods = "Command"
+chars = "\u001bb"
+
+[[keyboard.bindings]]
+key = "Right"
+mods = "Command"
+chars = "\u001bf"
