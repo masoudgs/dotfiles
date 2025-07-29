@@ -151,3 +151,20 @@ export PATH="$GOENV_ROOT/bin:$PATH"
 eval "$(goenv init -)"
 export PATH="$GOROOT/bin:$PATH"
 export PATH="$PATH:$GOPATH/bin"
+
+# Custom aliases directory
+# Change this to the path where your custom aliases are stored
+custom_aliases_dir="$HOME/dotfiles/zsh/aliases"
+
+# Load custom aliases from all .sh files in the directory
+if [ -d "$custom_aliases_dir" ]; then
+  echo "Loading custom aliases from $custom_aliases_dir"
+  for file in "$custom_aliases_dir/"*.sh; do
+    if [ -f "$file" ]; then
+      echo "Loaded $file"
+      source "$file"
+    fi
+  done
+else
+  echo "No custom aliases directory found at $custom_aliases_dir"
+fi
